@@ -1,3 +1,4 @@
+console.log("Script is loading...");
 
 let container = document.querySelector(".contain");
 const searchInput = document.querySelector(".form");
