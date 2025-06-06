@@ -3,7 +3,8 @@ console.log("Script is loading...");
 let container = document.querySelector(".contain");
 const searchInput = document.querySelector(".form");
 const regionFilter = document.getElementById("region-filter");
-
+const text = document.querySelector(".text");
+const icon = document.querySelector(".icon");
 let countries = [];
 
 
@@ -52,17 +53,19 @@ regionFilter.addEventListener("change", () => {
 });
 
 
-
-
 const toggleIcon = document.querySelector(".dark");
 
 toggleIcon.addEventListener("click", () => {
   document.body.classList.toggle("dark-mode");
-
   if (document.body.classList.contains("dark-mode")) {
-    toggleIcon.classList.replace("fa-moon", "fa-sun");
+    icon.classList.replace("fa-sun", "fa-moon");
+    text.textContent = "Dark Mode";
   } else {
-    toggleIcon.classList.replace("fa-sun", "fa-moon");
+    icon.classList.replace("fa-moon", "fa-sun");
+    text.textContent = "Light Mode";
   }
+
+
+  
 });
 
